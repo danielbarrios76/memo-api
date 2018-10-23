@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Memo.create([{ title: 'nuevo memo 1' }, { body: 'este es un ejemplo de un memo corto' }])
+Memo.create([{ title: 'nuevo memo 2' }, { body: 'este es un ejemplo de un memo corto' }])
+Memo.create([{ title: 'nuevo memo 3' }, { body: 'este es un ejemplo de un memo corto' }])
