@@ -1,0 +1,118 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/danielbarrios76/Projects/memo-api/lib/api_constraints.rb": [
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        4,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/danielbarrios76/Projects/memo-api/app/models/memo.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/home/danielbarrios76/Projects/memo-api/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/danielbarrios76/Projects/memo-api/app/controllers/api/v1/memos_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        4,
+        4,
+        4,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/home/danielbarrios76/Projects/memo-api/app/controllers/api/v1/api_controller.rb": [
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/home/danielbarrios76/Projects/memo-api/app/controllers/application_controller.rb": [
+        1,
+        null
+      ],
+      "/home/danielbarrios76/Projects/memo-api/app/mailers/application_mailer.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/danielbarrios76/Projects/memo-api/app/controllers/api/v1/version_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/danielbarrios76/Projects/memo-api/app/serializers/memo_serializer.rb": [
+        0,
+        0,
+        0
+      ],
+      "/home/danielbarrios76/Projects/memo-api/app/jobs/application_job.rb": [
+        0,
+        0
+      ],
+      "/home/danielbarrios76/Projects/memo-api/app/channels/application_cable/channel.rb": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "/home/danielbarrios76/Projects/memo-api/app/channels/application_cable/connection.rb": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1540332909
+  }
+}
