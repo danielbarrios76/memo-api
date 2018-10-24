@@ -25,17 +25,17 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="app-controllers-api-v1-memos_controller_rb.html">app/controllers/api/v1/memos_controller.rb</a></td>
-            <td class='right_align'><tt>25</tt></td>
-            <td class='right_align'><tt>14</tt></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>84.00%</tt></div>
+            <td class='right_align'><tt>50</tt></td>
+            <td class='right_align'><tt>27</tt></td>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>96.00%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:84px"></div>
-        <div class="uncovered" style="width:16px"></div>
+        <div class="covered" style="width:96px"></div>
+        <div class="uncovered" style="width:4px"></div>
       </div></td>
-            <td class="left_align"><div class="percent_graph_legend"><tt class=''>71.43%</tt></div>
+            <td class="left_align"><div class="percent_graph_legend"><tt class=''>92.59%</tt></div>
       <div class="percent_graph">
-        <div class="covered" style="width:71px"></div>
-        <div class="uncovered" style="width:29px"></div>
+        <div class="covered" style="width:93px"></div>
+        <div class="uncovered" style="width:7px"></div>
       </div></td>
           </tr>
         </tbody>
@@ -56,10 +56,10 @@
         <tr class="marked">
           <td><pre><a name="line3">3</a>   def index</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line4">4</a>     @memos = Memo.all</pre></td>
         </tr>
-        <tr class="uncovered">
+        <tr class="marked">
           <td><pre><a name="line5">5</a>     render json: @memos, status: 200</pre></td>
         </tr>
         <tr class="inferred">
@@ -96,39 +96,114 @@
           <td><pre><a name="line16">16</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line17">17</a>   private</pre></td>
-        </tr>
-        <tr class="inferred">
-          <td><pre><a name="line18">18</a> </pre></td>
+          <td><pre><a name="line17">17</a>   def show</pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line19">19</a>   def memo_params</pre></td>
-        </tr>
-        <tr class="marked">
-          <td><pre><a name="line20">20</a>     params.require(:memo).permit(:title, :body)</pre></td>
+          <td><pre><a name="line18">18</a>     render json: current_memo, status: 200</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line21">21</a>   end</pre></td>
+          <td><pre><a name="line19">19</a>   end</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line22">22</a> </pre></td>
+          <td><pre><a name="line20">20</a> </pre></td>
         </tr>
         <tr class="marked">
-          <td><pre><a name="line23">23</a>   def current_memo</pre></td>
+          <td><pre><a name="line21">21</a>   def update</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line22">22</a>     if current_memo.update_attributes(memo_params)</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line23">23</a>       render json: { &#39;id&#39; =&gt; current_memo.id }, status: 200</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line24">24</a>     else</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line25">25</a>       render json: current_memo.errors, status: 400</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line26">26</a>     end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line27">27</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line28">28</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line29">29</a>   def destroy</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line30">30</a>     current_memo.destroy</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line31">31</a>     render json: { &#39;id&#39; =&gt; current_memo.id }, status: 200</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line32">32</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line33">33</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line34">34</a>   def comply</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line35">35</a>     if current_memo.comply!</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line36">36</a>       render json: current_memo, status: 200</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line37">37</a>     else</pre></td>
         </tr>
         <tr class="uncovered">
-          <td><pre><a name="line24">24</a>     @current_memo ||= Memo.find(params[:id])</pre></td>
+          <td><pre><a name="line38">38</a>       render json: current_memo.errors, status: 400</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line25">25</a>   end</pre></td>
+          <td><pre><a name="line39">39</a>     end</pre></td>
         </tr>
         <tr class="inferred">
-          <td><pre><a name="line26">26</a> end</pre></td>
+          <td><pre><a name="line40">40</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line41">41</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line42">42</a>   private</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line43">43</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line44">44</a>   def memo_params</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line45">45</a>     params.require(:memo).permit(:title, :body)</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line46">46</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line47">47</a> </pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line48">48</a>   def current_memo</pre></td>
+        </tr>
+        <tr class="marked">
+          <td><pre><a name="line49">49</a>     @current_memo ||= Memo.find(params[:id])</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line50">50</a>   end</pre></td>
+        </tr>
+        <tr class="inferred">
+          <td><pre><a name="line51">51</a> end</pre></td>
         </tr>
       </tbody>
     </table>
 
-    <p>Generated on 2018-10-23 19:15:09 -0300 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
+    <p>Generated on 2018-10-23 21:58:25 -0300 with <a href="https://github.com/fguillen/simplecov-rcov">SimpleCov-RCov 0.2.3</a></p>
 
   </body>
 </html>
