@@ -12,6 +12,9 @@ gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 
+# Enable CORS
+gem 'rack-cors', :require => 'rack/cors'
+
 # Json serializer
 gem 'active_model_serializers', '~> 0.10.7'
 
