@@ -11,7 +11,7 @@
         null,
         null,
         1,
-        4,
+        19,
         0,
         null,
         null,
@@ -25,9 +25,8 @@
         1,
         1,
         null,
-        null,
         1,
-        0,
+        4,
         null,
         null
       ],
@@ -39,8 +38,8 @@
       "/home/danielbarrios76/Projects/memo-api/app/controllers/api/v1/memos_controller.rb": [
         1,
         1,
-        0,
-        0,
+        4,
+        4,
         null,
         null,
         1,
@@ -53,13 +52,38 @@
         null,
         null,
         1,
+        2,
+        null,
         null,
         1,
         4,
+        3,
+        null,
+        1,
+        null,
         null,
         null,
         1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        4,
+        4,
+        null,
         0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        8,
+        null,
+        null,
+        1,
+        20,
         null,
         null
       ],
@@ -78,6 +102,11 @@
         1,
         null
       ],
+      "/home/danielbarrios76/Projects/memo-api/app/serializers/memo_serializer.rb": [
+        1,
+        1,
+        null
+      ],
       "/home/danielbarrios76/Projects/memo-api/app/mailers/application_mailer.rb": [
         0,
         0,
@@ -87,11 +116,6 @@
       "/home/danielbarrios76/Projects/memo-api/app/controllers/api/v1/version_controller.rb": [
         0,
         0,
-        0,
-        0,
-        0
-      ],
-      "/home/danielbarrios76/Projects/memo-api/app/serializers/memo_serializer.rb": [
         0,
         0,
         0
@@ -113,6 +137,6 @@
         0
       ]
     },
-    "timestamp": 1540332909
+    "timestamp": 1540342704
   }
 }

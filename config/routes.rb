@@ -9,7 +9,9 @@ Rails.application.routes.draw do
       get 'version' => 'version#show'
 
       # Memos
-      resources :memos
+      resources :memos do
+        put 'comply', on: :member
+      end
     end
   end
 end
